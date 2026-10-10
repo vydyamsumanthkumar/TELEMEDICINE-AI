@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Symptom Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>My Symptom Reports</h2>
+        <a href="{{ url_for('patient') }}">Dashboard</a>
+        <a href="{{ url_for('symptom_intake') }}">Enter Symptoms</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div class="card">
+        <h2>Previous Reports</h2>
+
+        {% if reports %}
+            {% for report in reports %}
+                <div class="card">
+                    <p><strong>Date:</strong> {{ report["created_at"] }}</p>
+                    <p><strong>Symptoms:</strong> {{ report["symptoms"] }}</p>
+                    <p><strong>Duration:</strong> {{ report["duration"] }}</p>
+                    <p><strong>Severity:</strong> {{ report["severity"] }}</p>
+                    <p><strong>Result:</strong> {{ report["triage_result"] }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>You have not submitted any symptom reports yet.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
