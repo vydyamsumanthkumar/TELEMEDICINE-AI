@@ -1,0 +1,16 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Secret environment variables
+.env
+
+# Local database
+database.db
+
+# Instance files
+instance/git status
