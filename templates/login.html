@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login | MediConnect</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🩺 MediConnect
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#">About</a>
+
+            <a href="#">Help</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- LOGIN SECTION -->
+
+    <section class="login-container">
+
+        <div class="intro">
+
+            <h1>
+                Your Health,<br>
+                Our Priority.
+            </h1>
+
+            <p>
+                Connect with qualified doctors from anywhere.
+                Get timely medical consultation and intelligent
+                triage support through our telemedicine platform.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p class="card-subtitle">
+                Login to your account
+            </p>
+
+
+            <form method="POST" action="/login">
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+
+                <button class="btn" type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p class="bottom-text">
+
+                Don't have an account?
+
+                <a href="/register">
+                    Create Account
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html
